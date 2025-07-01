@@ -1,9 +1,11 @@
 "use client";
-
+import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import Image from "next/image";
+
+// Lazy-load with SSR disabled
+const LeafletMap = dynamic(() => import("./leafletMap"), { ssr: false });
 
 export function ExploreArea() {
 	const categories = [
@@ -117,19 +119,7 @@ export function ExploreArea() {
 				{/* Right side - Map */}
 
 				<div className='relative overflow-hidden border'>
-					<MapContainer
-						center={[36.785834, 3.058756]}
-						zoom={13}
-						style={{ height: "250px", width: "100%" }}
-					>
-						<TileLayer
-							attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a>'
-							url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-						/>
-						<Marker position={[36.785834, 3.058756]}>
-							<Popup>Bab El Oued</Popup>
-						</Marker>
-					</MapContainer>
+					<LeafletMap />
 					{/* Explore link */}
 					<div className='mt-4 text-center pt-0 py-4'>
 						<Button className='text-blue-600  text-lg hover:text-blue-700 p-0 bg-transparent border-0 shadow-none hover:bg-transparent hover:cursor-pointer'>
