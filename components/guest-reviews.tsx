@@ -3,7 +3,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, ArrowLeft, ArrowRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 
@@ -49,20 +49,29 @@ export function GuestReviews() {
 	];
 
 	return (
-		<div className='bg-white rounded-lg p-6 shadow-sm'>
+		<div>
 			<div className='flex items-center justify-between mb-6'>
 				<h3 className='text-xl font-semibold text-gray-900'>
 					What Our Guests Say
 				</h3>
-				<Button
-					variant='link'
-					className='text-blue-600 hover:text-blue-700 p-0'
-				>
-					See All... →
-				</Button>
 			</div>
 
 			<div className='relative'>
+				{/* Custom Navigation */}
+				<div className='flex justify-between items-center my-6 place-self-center w-4/5'>
+					<div className='flex flex-row '>
+						<button className='reviews-button-prev w-10 h-10 bg-[#C8C8C81A]  rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors'>
+							<ArrowLeft className='w-6 h-6 text-[#D2D2D2] hover:text-blue-600' />
+						</button>
+
+						<button className='reviews-button-next w-10 h-10 bg-[#C8C8C81A]  rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors ml-2'>
+							<ArrowRight className='w-6 h-6 text-[#D2D2D2] hover:text-blue-600' />
+						</button>
+					</div>
+					<Button className='text-blue-600 text-md hover:text-blue-700 pb-4 bg-transparent border-b-blue-600 border-b-1 rounded-none shadow-none hover:bg-transparent hover:cursor-pointer'>
+						See All... →
+					</Button>
+				</div>
 				<Swiper
 					modules={[Navigation, Pagination]}
 					spaceBetween={24}
@@ -119,17 +128,6 @@ export function GuestReviews() {
 						</SwiperSlide>
 					))}
 				</Swiper>
-
-				{/* Custom Navigation */}
-				<div className='flex justify-center items-center mt-6 space-x-4'>
-					<button className='reviews-button-prev w-10 h-10 bg-gray-100 text-gray-600 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors'>
-						<ChevronLeft className='w-4 h-4' />
-					</button>
-					<div className='reviews-pagination'></div>
-					<button className='reviews-button-next w-10 h-10 bg-gray-100 text-gray-600 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors'>
-						<ChevronRight className='w-4 h-4' />
-					</button>
-				</div>
 			</div>
 		</div>
 	);

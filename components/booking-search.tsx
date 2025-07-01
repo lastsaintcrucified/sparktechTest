@@ -81,9 +81,9 @@ export function BookingSearch({ onSearch }: BookingSearchProps) {
 
 	return (
 		<div className=' rounded-lg  mb-6'>
-			<div className='grid grid-cols-1 md:grid-cols-7 gap-4 '>
+			<div className='grid grid-cols-1 lg:grid-cols-7 gap-4 '>
 				{/* Check-In Date */}
-				<div className='grid grid-cols-4 col-span-5 gap-4  border-1 border-[#007DD0] px-5 py-2 rounded-lg'>
+				<div className='grid  lg:grid-cols-4 lg:col-span-5 gap-4  border-1 border-[#007DD0] px-5 py-2 rounded-lg'>
 					<div>
 						<label className='block text-sm  mb-2 text-[#626262]'>
 							Check-In
@@ -93,7 +93,7 @@ export function BookingSearch({ onSearch }: BookingSearchProps) {
 								<Button
 									variant='outline'
 									className={cn(
-										"w-full justify-start text-left font-normal bg-[#F6F6F6] border-0 rounded-4xl ",
+										"w-full justify-start text-left font-normal bg-[#F6F6F6] border-0 rounded-4xl px-1",
 										!checkIn && "text-muted-foreground"
 									)}
 								>
@@ -131,7 +131,7 @@ export function BookingSearch({ onSearch }: BookingSearchProps) {
 								<Button
 									variant='outline'
 									className={cn(
-										"w-full justify-start text-left font-normal bg-[#F6F6F6] border-0 rounded-4xl ",
+										"w-full justify-start text-left font-normal bg-[#F6F6F6] border-0 rounded-4xl px-1",
 										!checkOut && "text-muted-foreground"
 									)}
 								>
@@ -175,7 +175,7 @@ export function BookingSearch({ onSearch }: BookingSearchProps) {
 							<PopoverTrigger asChild>
 								<Button
 									variant='outline'
-									className='w-full justify-start text-left font-normal bg-[#F6F6F6] border-0 rounded-4xl '
+									className='w-full justify-start text-left font-normal bg-[#F6F6F6] border-0 rounded-4xl px-1'
 								>
 									<Image
 										src='/images/icons/homeBlue.svg'
@@ -299,7 +299,7 @@ export function BookingSearch({ onSearch }: BookingSearchProps) {
 					<div className='flex items-end'>
 						<Button
 							onClick={handleSearch}
-							className='w-2/3 bg-blue-600 hover:bg-blue-700 text-white rounded-full'
+							className='w-full md:w-2/3 bg-blue-600 hover:bg-blue-700 text-white rounded-full'
 							disabled={!checkIn || !checkOut}
 						>
 							Search

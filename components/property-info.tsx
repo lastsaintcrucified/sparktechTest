@@ -255,17 +255,17 @@ export function PropertyInfo({ searchData }: PropertyInfoProps) {
 	};
 
 	return (
-		<div className='grid grid-cols-1 lg:grid-cols-4 gap-8'>
+		<div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
 			{/* Main Content */}
-			<div className='lg:col-span-3 bg-white '>
+			<div className='md:col-span-2 bg-white '>
 				{/* Tab Navigation */}
 
-				<div className='flex items-center space-x-8 gap-4 mb-8 '>
+				<div className='flex items-center justify-between md:justify-start md:space-x-8 md:gap-4 mb-8 '>
 					<button
 						onClick={() => setActiveTab("overview")}
-						className={`pb-2 font-medium transition-colors ${
+						className={`pb-2 text-xs md:text-[16px] font-medium transition-colors ${
 							activeTab === "overview"
-								? "text-blue-600 border-b-2 border-blue-600"
+								? "text-blue-600 relative after:content-[''] after:block after:border-b-2 after:border-blue-600 after:w-1/2 after:mt-1 after:mx-0 "
 								: "text-gray-600 hover:text-blue-600"
 						}`}
 					>
@@ -273,9 +273,9 @@ export function PropertyInfo({ searchData }: PropertyInfoProps) {
 					</button>
 					<button
 						onClick={() => setActiveTab("features")}
-						className={`pb-2 font-medium transition-colors ${
+						className={`pb-2 text-xs md:text-[16px] font-medium transition-colors ${
 							activeTab === "features"
-								? "text-blue-600 border-b-2 border-blue-600"
+								? "text-blue-600 relative after:content-[''] after:block after:border-b-2 after:border-blue-600 after:w-1/2 after:mt-1 after:mx-0"
 								: "text-gray-600 hover:text-blue-600"
 						}`}
 					>
@@ -283,9 +283,9 @@ export function PropertyInfo({ searchData }: PropertyInfoProps) {
 					</button>
 					<button
 						onClick={() => setActiveTab("reviews")}
-						className={`pb-2 font-medium transition-colors ${
+						className={`pb-2 text-xs md:text-[16px] font-medium transition-colors ${
 							activeTab === "reviews"
-								? "text-blue-600 border-b-2 border-blue-600"
+								? "text-blue-600 relative after:content-[''] after:block after:border-b-2 after:border-blue-600 after:w-1/2 after:mt-1 after:mx-0"
 								: "text-gray-600 hover:text-blue-600"
 						}`}
 					>
@@ -298,7 +298,7 @@ export function PropertyInfo({ searchData }: PropertyInfoProps) {
 							width={24}
 							height={24}
 						/>
-						Message
+						<span className='hidden md:block'>Message</span>
 					</Button>
 				</div>
 
@@ -307,8 +307,8 @@ export function PropertyInfo({ searchData }: PropertyInfoProps) {
 			</div>
 
 			{/* Booking Summary Card */}
-			<div className='lg:col-span-1 '>
-				<div className='bg-white  border-1 border-[#007DD0] rounded-lg px-6 py-20 shadow-sm sticky top-6 '>
+			<div className='md:col-span-1'>
+				<div className='w-full md:w-3/4 lg:w-4/5 bg-white  border-1 border-[#007DD0] rounded-lg px-6 py-20 shadow-sm sticky top-6 '>
 					<div className='text-center space-y-4'>
 						<div className='text-gray-600 text-sm'>
 							{bookingSummary.duration}, {bookingSummary.guests}

@@ -52,17 +52,16 @@ export default function HotelBooking() {
 				</div>
 
 				{/* About Property */}
-				<div className='bg-white rounded-lg p-6 shadow-sm'>
+				<div>
 					<h3 className='text-xl font-semibold mb-4 text-gray-900'>
 						About this property
 					</h3>
 					<p className='text-gray-700 leading-relaxed'>
-						Located in the heart of Algiers, El Aurassi offers a luxurious and
-						welcoming experience tailored for both business and leisure
-						travelers. With its stunning architecture, world-class amenities,
-						and exceptional service, the hotel provides an unforgettable stay.
-						Guests can enjoy spacious rooms with panoramic views, fine dining
-						restaurants, and comprehensive business facilities.
+						The Executive Suite at El Aurassi Hotel in Algiers offers a
+						luxurious and spacious experience tailored for both business and
+						leisure travelers. With its modern design and panoramic views of the
+						Mediterranean Sea, the suite combines comfort, elegance, and
+						functionality.
 					</p>
 				</div>
 

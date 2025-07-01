@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Bookmark, Share2 } from "lucide-react";
+import { Bookmark, Save, Share2 } from "lucide-react";
 
 interface HotelHeroProps {
 	name: string;
@@ -10,12 +10,12 @@ interface HotelHeroProps {
 
 export function HotelHero({ name, description }: HotelHeroProps) {
 	return (
-		<div className='flex justify-between items-start mb-6'>
+		<div className='flex flex-col-reverse   md:flex-row md:justify-between md:items-start mb-6'>
 			<div className='flex-1'>
 				<h1 className='text-3xl font-bold text-gray-900 mb-2'>{name}</h1>
 				<p className='text-gray-600 max-w-md'>{description}</p>
 			</div>
-			<div className='flex space-x-3 ml-6'>
+			<div className='flex space-x-3 mb-5 md:mb-0 md:ml-6'>
 				<Button
 					variant='outline'
 					size='sm'
@@ -29,10 +29,11 @@ export function HotelHero({ name, description }: HotelHeroProps) {
 					className='flex items-center space-x-2 px-4 bg-transparent'
 				>
 					<Share2 className='w-4 h-4' />
-					<span>Share</span>
+					<span className='hidden md:block'>Share</span>
 				</Button>
 				<Button className='bg-blue-600 hover:bg-blue-700 px-6'>
-					Reserve →
+					<Save className='w-4 h-4 md:hidden' />
+					<span className='hidden md:block'>Reserve →</span>
 				</Button>
 			</div>
 		</div>
