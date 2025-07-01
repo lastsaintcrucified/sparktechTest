@@ -9,7 +9,6 @@ import {
 	SelectValue,
 } from "@/components/ui/select";
 import {
-	ExternalLink,
 	MessageCircle,
 	User,
 	Menu,
@@ -46,31 +45,31 @@ export function Header() {
 
 					<nav className='hidden lg:flex space-x-6'>
 						<a
-							href='#'
+							href='#home'
 							className='text-blue-600 font-medium hover:text-blue-700'
 						>
 							Home
 						</a>
 						<a
-							href='#'
+							href='#hotels'
 							className='text-gray-700 hover:text-blue-600'
 						>
 							Hotels
 						</a>
 						<a
-							href='#'
+							href='#hotels'
 							className='text-gray-700 hover:text-blue-600'
 						>
 							House
 						</a>
 						<a
-							href='#'
+							href='#review'
 							className='text-gray-700 hover:text-blue-600'
 						>
 							About Us
 						</a>
 						<a
-							href='#'
+							href='#contact'
 							className='text-gray-700 hover:text-blue-600'
 						>
 							Contact Us
@@ -130,10 +129,16 @@ export function Header() {
 					{/* List Property Link */}
 					<a
 						href='#'
-						className='flex items-center text-sm text-gray-700 hover:text-blue-600 bg-transparent rounded-2xl border-[#A5D3F1] border px-4 py-2 transition-colors'
+						className='flex items-center text-[16px] text-[#007DD0] hover:text-blue-600 bg-transparent rounded-2xl border-[#A5D3F1] border px-4 py-2 transition-colors'
 					>
 						List your property
-						<ExternalLink className='w-3 h-3 ml-1' />
+						<Image
+							src='/images/icons/arrow-up-right-01-round.svg'
+							alt='Logo'
+							width={24}
+							height={24}
+							className='ml-1 object-contain place-self-center'
+						/>
 					</a>
 
 					{/* Refresh Button */}
@@ -171,35 +176,35 @@ export function Header() {
 						<div className='py-4 border-t border-gray-200'>
 							<div className='flex flex-col space-y-4'>
 								<Link
-									href='#'
+									href='#home'
 									className='border-b-blue-400 border-b-1 flex flex-row justify-start items-center text-blue-800 hover:text-blue-600 font-medium'
 								>
 									<Home className='w-4 h-4 mr-2' />
 									Home
 								</Link>
 								<Link
-									href='#'
+									href='#hotels'
 									className='border-b-blue-400 border-b-1 flex flex-row justify-start items-center text-blue-800 hover:text-blue-600 font-medium'
 								>
 									<Hotel className='w-4 h-4 mr-2' />
 									Hotels
 								</Link>
 								<Link
-									href='#'
+									href='#hotels'
 									className='border-b-blue-400 border-b-1 flex flex-row justify-start items-center text-blue-800 hover:text-blue-600 font-medium'
 								>
 									<DoorClosed className='w-4 h-4 mr-2' />
 									House
 								</Link>
 								<Link
-									href='#'
+									href='#review'
 									className='border-b-blue-400 border-b-1 flex flex-row justify-start items-center text-blue-800 hover:text-blue-600 font-medium'
 								>
 									<PersonStanding className='w-4 h-4 mr-2' />
 									About Us
 								</Link>
 								<Link
-									href='#'
+									href='#contact'
 									className='border-b-blue-400 border-b-1 flex flex-row justify-start items-center text-blue-800 hover:text-blue-600 font-medium'
 								>
 									<Contact className='w-4 h-4 mr-2' />

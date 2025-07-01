@@ -43,7 +43,11 @@ export default function HotelBooking() {
 				<PropertyInfo searchData={searchData} />
 
 				{/* Availability Section */}
-				<div className='bg-white '>
+
+				<div
+					id='hotels'
+					className='bg-white '
+				>
 					<h3 className='text-xl font-semibold mb-6 text-gray-900'>
 						Availability
 					</h3>

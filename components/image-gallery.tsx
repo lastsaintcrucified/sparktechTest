@@ -56,7 +56,7 @@ export function ImageGallery() {
 	];
 
 	return (
-		<div className='grid grid-rows-[auto_1fr_auto] gap-0.5'>
+		<div className='grid grid-rows-[auto_1fr_auto] gap-0.5 '>
 			{/* Main Gallery Grid */}
 			<div className='grid grid-cols-3 gap-0.5 row-span-1 '>
 				{/* Large Main Image - Left Side */}
@@ -101,14 +101,14 @@ export function ImageGallery() {
 				{images.slice(3, 9).map((image, index) => (
 					<div
 						key={index + 3}
-						className='relative'
+						className='relative '
 					>
 						<Image
 							src={image.src || "/placeholder.svg"}
 							alt={image.alt}
 							width={181}
 							height={151}
-							className=' w-full object-cover cursor-pointer hover:opacity-90 transition-opacity'
+							className=' w-full rounded-none object-cover cursor-pointer hover:opacity-90 transition-opacity'
 							onClick={() => setSelectedImage(index + 3)}
 						/>
 					</div>

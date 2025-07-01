@@ -10,7 +10,10 @@ interface HotelHeroProps {
 
 export function HotelHero({ name, description }: HotelHeroProps) {
 	return (
-		<div className='flex flex-col-reverse   md:flex-row md:justify-between md:items-start mb-6'>
+		<div
+			id='#home'
+			className='flex flex-col-reverse   md:flex-row md:justify-between md:items-start mb-6'
+		>
 			<div className='flex-1'>
 				<h1 className='text-3xl font-bold text-gray-900 mb-2'>{name}</h1>
 				<p className='text-gray-600 max-w-md'>{description}</p>

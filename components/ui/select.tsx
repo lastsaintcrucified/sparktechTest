@@ -59,7 +59,7 @@ function SelectTrigger({
 		>
 			{children}
 			<SelectPrimitive.Icon asChild>
-				<ChevronDownIcon className='size-5 text-blue-600 bg-transparent ' />
+				<ChevronDownIcon className='size-5 text-[#007DD0] bg-transparent ' />
 			</SelectPrimitive.Icon>
 		</SelectPrimitive.Trigger>
 	);
